@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  // justify-content: center;
+  padding: 1rem 0 0 3rem;
+}
+
+.box-bg {
+  background-color: $emphasis-bg-color;
+  border-radius: 30px;
+  height: 600px;
+  position: relative;
+  width: 150px;
+}
+
+.box-content {
+  background-color: #f8f8ff;
+  border-radius: 30px;
+  left: 61px;
+  position: absolute;
+  display: flex;
+  top: 20px;
+  width: max-content;
+  height: 90%;
+  padding: to-rem(22);
+  box-shadow: -12px 17px 39px -5px #000;
+}
