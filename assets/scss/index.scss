@@ -1,0 +1,36 @@
+@import "./common/glob.scss";
+
+@import "./core/glob.scss";
+
+@import "./layout/glob.scss";
+
+@media screen and (max-width: 775px) {
+  .container {
+    padding: 20px;
+  }
+
+  .box-content {
+    border-bottom-left-radius: 1.875rem;
+    box-shadow: -34px 38px 27px -19px #000;
+    flex-direction: column;
+    width: 75vw;
+  }
+
+  .header {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: to-rem(30);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+
+    .header__menu {
+      display: none;
+    }
+  }
+
+  .main {
+    border-bottom-left-radius: to-rem(30);
+    width: 100%;
+  }
+}

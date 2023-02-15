@@ -1,8 +1,13 @@
 .header {
   @extend %container-flex;
-
+  background-color: $secondary-bg-color;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: -34px 38px 27px -19px #000;
+  padding: to-rem(22);
+  border-top-left-radius: to-rem(30);
+  border-bottom-left-radius: to-rem(30);
+  width: max-content;
 
   .header__profile {
     @extend %container-flex;
@@ -27,8 +32,6 @@
   }
 
   .header__menu {
-    margin-top: to-rem(0);
-
     .header__item {
       @extend %container-flex;
       @extend %align-container;
@@ -77,9 +80,5 @@
     @extend %align-container;
 
     gap: to-rem(10);
-
-    .header__link {
-      font-weight: 700;
-    }
   }
 }

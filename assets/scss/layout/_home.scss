@@ -1,0 +1,70 @@
+.main {
+  background-color: #fff;
+  max-width: 600px;
+  padding: to-rem(40);
+  width: 50vw;
+
+  .main__title {
+    color: $primary-text-color;
+  }
+
+  .main__order-history {
+    margin: to-rem(30) 0 to-rem(30) 0;
+  }
+
+  .order-history__title {
+    color: $primary-text-color;
+    font-size: 1rem;
+  }
+
+  .order-history__desc {
+    color: $secondary-text-color;
+    font: {
+      weight: 500;
+      size: to-rem(14);
+    }
+  }
+
+  .main__billing_informations {
+    table {
+      border-collapse: collapse;
+      text-align: left;
+      word-wrap: break-word;
+    }
+
+    th,
+    td {
+      color: $primary-text-color;
+      font-weight: 500;
+    }
+
+    th {
+      font-size: to-rem(14);
+    }
+
+    tr {
+      transition: 0.1s;
+    }
+
+    tr:not(:has(th)):hover {
+      background-color: $secondary-bg-color;
+      transform: scale(1.1);
+    }
+
+    td {
+      cursor: pointer;
+      font-size: 1rem;
+      min-width: 10%;
+      padding: 15px 15px 15px 0;
+      width: 40%;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    tr td:last-child:hover {
+      color: $emphasis-bg-color;
+    }
+  }
+}

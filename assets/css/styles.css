@@ -20,31 +20,31 @@ ul {
   align-items: center; }
 
 .container {
-  display: flex;
   padding: 1rem 0 0 3rem; }
 
 .box-bg {
   background-color: #ee4d38;
-  border-radius: 30px;
+  border-radius: 1.875rem;
   height: 600px;
   position: relative;
   width: 150px; }
 
 .box-content {
-  background-color: #f8f8ff;
-  border-radius: 30px;
+  display: flex;
+  min-height: 90%;
   left: 61px;
   position: absolute;
-  display: flex;
-  top: 20px;
-  width: max-content;
-  height: 90%;
-  padding: 1.375rem;
-  box-shadow: -12px 17px 39px -5px #000; }
+  top: 20px; }
 
 .header {
+  background-color: #f3f3f3;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  box-shadow: -34px 38px 27px -19px #000;
+  padding: 1.375rem;
+  border-top-left-radius: 1.875rem;
+  border-bottom-left-radius: 1.875rem;
+  width: max-content; }
   .header .header__profile {
     gap: 0.625rem;
     padding: 1rem; }
@@ -56,34 +56,93 @@ ul {
   .header .header__link {
     color: #62618f;
     font-size: 0.875rem; }
-  .header .header__menu {
-    margin-top: 0rem; }
-    .header .header__menu .header__item {
-      gap: 0.625rem;
-      margin-top: 1.125rem;
-      padding: 0.375rem 1rem; }
-      .header .header__menu .header__item .header__link {
-        position: relative;
-        transition: all 0.5s; }
-        .header .header__menu .header__item .header__link::before {
-          bottom: 0;
-          content: "";
-          display: block;
-          height: 1px;
-          left: -5px;
-          position: absolute;
-          transition: ease-in-out all 0.5s;
-          width: 0; }
-        .header .header__menu .header__item .header__link:hover::before {
-          background-color: #1a194d;
-          width: 120%; }
-        .header .header__menu .header__item .header__link:hover {
-          color: #1a194d; }
-    .header .header__menu .--active {
-      border-left: 3px solid #ee4d38; }
-      .header .header__menu .--active .header__link {
+  .header .header__menu .header__item {
+    gap: 0.625rem;
+    margin-top: 1.125rem;
+    padding: 0.375rem 1rem; }
+    .header .header__menu .header__item .header__link {
+      position: relative;
+      transition: all 0.5s; }
+      .header .header__menu .header__item .header__link::before {
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 1px;
+        left: -5px;
+        position: absolute;
+        transition: ease-in-out all 0.5s;
+        width: 0; }
+      .header .header__menu .header__item .header__link:hover::before {
+        background-color: #1a194d;
+        width: 120%; }
+      .header .header__menu .header__item .header__link:hover {
         color: #1a194d; }
+  .header .header__menu .--active {
+    border-left: 3px solid #ee4d38; }
+    .header .header__menu .--active .header__link {
+      color: #1a194d; }
   .header .header__logout {
     gap: 0.625rem; }
-    .header .header__logout .header__link {
-      font-weight: 700; }
+
+.main {
+  background-color: #fff;
+  max-width: 600px;
+  padding: 2.5rem;
+  width: 50vw; }
+  .main .main__title {
+    color: #1a194d; }
+  .main .main__order-history {
+    margin: 1.875rem 0 1.875rem 0; }
+  .main .order-history__title {
+    color: #1a194d;
+    font-size: 1rem; }
+  .main .order-history__desc {
+    color: #62618f;
+    font-weight: 500;
+    font-size: 0.875rem; }
+  .main .main__billing_informations table {
+    border-collapse: collapse;
+    text-align: left;
+    word-wrap: break-word; }
+  .main .main__billing_informations th,
+  .main .main__billing_informations td {
+    color: #1a194d;
+    font-weight: 500; }
+  .main .main__billing_informations th {
+    font-size: 0.875rem; }
+  .main .main__billing_informations tr {
+    transition: 0.1s; }
+  .main .main__billing_informations tr:not(:has(th)):hover {
+    background-color: #f3f3f3;
+    transform: scale(1.1); }
+  .main .main__billing_informations td {
+    cursor: pointer;
+    font-size: 1rem;
+    min-width: 10%;
+    padding: 15px 15px 15px 0;
+    width: 40%; }
+    .main .main__billing_informations td:hover {
+      text-decoration: underline; }
+  .main .main__billing_informations tr td:last-child:hover {
+    color: #ee4d38; }
+
+@media screen and (max-width: 775px) {
+  .container {
+    padding: 20px; }
+  .box-content {
+    border-bottom-left-radius: 1.875rem;
+    box-shadow: -34px 38px 27px -19px #000;
+    flex-direction: column;
+    width: 75vw; }
+  .header {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1.875rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%; }
+    .header .header__menu {
+      display: none; }
+  .main {
+    border-bottom-left-radius: 1.875rem;
+    width: 100%; } }
